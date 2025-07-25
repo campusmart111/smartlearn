@@ -53,9 +53,7 @@ function hideLoginModal() {
 // Google login
 async function signInWithGoogle() {
   try {
-    const result = await firebase.auth().signInWithPopup(googleProvider);
-    console.log('User signed in:', result.user);
-    hideLoginModal();
+    await firebase.auth().signInWithRedirect(googleProvider);
   } catch (error) {
     console.error('Error signing in:', error);
     alert('Error signing in with Google. Please try again.');
@@ -74,6 +72,16 @@ async function signOut() {
 
 // Event listeners
 document.addEventListener('DOMContentLoaded', function() {
+  // Handle redirect result from Google sign-in
+  firebase.auth().getRedirectResult().then((result) => {
+    if (result.user) {
+      console.log('User signed in via redirect:', result.user);
+      hideLoginModal();
+    }
+  }).catch((error) => {
+    console.error('Error handling redirect result:', error);
+  });
+
   // Login button in navigation
   const loginBtn = document.getElementById('login-btn');
   if (loginBtn) {
@@ -113,6 +121,11 @@ document.addEventListener('DOMContentLoaded', function() {
 firebase.auth().onAuthStateChanged(function(user) {
   currentUser = user;
   updateAuthUI(user);
+  
+  // Hide login modal when user successfully logs in
+  if (user) {
+    hideLoginModal();
+  }
   
   // Load featured courses on homepage
   if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
