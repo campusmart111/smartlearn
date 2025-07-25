@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Player - SmartLearn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-blue-600">SmartLearn</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="courses.html" class="text-gray-700 hover:text-blue-600">Courses</a>
+                    <a href="my-courses.html" class="text-blue-600 font-semibold">My Learning</a>
+                </div>
+                <div id="user-info" class="hidden flex items-center space-x-2">
+                    <span id="user-name" class="text-gray-700 font-medium"></span>
+                    <button id="logout-btn" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="loading" class="pt-20 text-center py-12">
+        <div class="spinner mx-auto"></div>
+        <p class="mt-4 text-gray-600">Loading course content...</p>
+    </div>
+
+    <!-- Main Content -->
+    <main id="course-player-content" class="hidden pt-16 h-screen flex">
+        <!-- Sidebar -->
+        <aside class="w-1/4 bg-white h-full overflow-y-auto shadow-md">
+            <div class="p-4 border-b">
+                <h2 id="course-title" class="text-xl font-bold text-gray-800"></h2>
+            </div>
+            <div id="modules-list" class="divide-y">
+                <!-- Modules and lessons will be loaded here -->
+            </div>
+        </aside>
+
+        <!-- Content Display -->
+        <section class="w-3/4 h-full flex flex-col">
+            <div id="content-display" class="flex-grow p-8 bg-gray-50 overflow-y-auto">
+                <div id="welcome-message" class="text-center text-lg text-gray-700 my-8">
+                    Select a lecture or note to begin.
+                </div>
+                <div id="video-container" class="hidden">
+                    <video id="video-player" controls class="w-full max-h-[400px] rounded-lg shadow"></video>
+                </div>
+                <div id="notes-container" class="hidden mt-6">
+                    <h4 id="notes-title" class="text-lg font-bold mb-2"></h4>
+                    <div id="notes-content" class="prose"></div>
+                    <!-- You can add more note content here if needed -->
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="firebase.js"></script>
+    <script src="script.js"></script>
+    <script src="lecture.js"></script>
+</body>
+</html>
