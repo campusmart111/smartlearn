@@ -99,7 +99,76 @@ const sampleCourses = [
       }
     ],
     createdAt: { seconds: Date.now() / 1000 },
-    featured: true
+    featured: true,
+    modules: [
+      {
+        title: "Day 1: Introduction & Setup",
+        lectures: [
+          {
+            title: "Course Introduction",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+            duration: "15:30"
+          },
+          {
+            title: "Development Environment Setup",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+            duration: "22:45"
+          }
+        ],
+        notes: [
+          {
+            title: "Setup Guide",
+            content: "<h3>Development Environment Setup</h3><p>Follow these steps to set up your development environment:</p><ul><li>Install Node.js</li><li>Install VS Code</li><li>Configure Git</li></ul>"
+          },
+          {
+            title: "Course Resources",
+            content: "<h3>Important Resources</h3><p>Here are the key resources for this course:</p><ul><li>Official Documentation</li><li>Community Forum</li><li>Practice Exercises</li></ul>"
+          }
+        ]
+      },
+      {
+        title: "Day 2: HTML & CSS Fundamentals",
+        lectures: [
+          {
+            title: "HTML Basics",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+            duration: "18:20"
+          },
+          {
+            title: "CSS Styling",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+            duration: "25:15"
+          }
+        ],
+        notes: [
+          {
+            title: "HTML Cheat Sheet",
+            content: "<h3>HTML Elements Reference</h3><p>Common HTML elements and their usage:</p><ul><li>&lt;div&gt; - Container element</li><li>&lt;p&gt; - Paragraph</li><li>&lt;h1-h6&gt; - Headings</li></ul>"
+          }
+        ]
+      },
+      {
+        title: "Day 3: JavaScript Essentials",
+        lectures: [
+          {
+            title: "JavaScript Fundamentals",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+            duration: "30:45"
+          },
+          {
+            title: "DOM Manipulation",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+            duration: "28:30"
+          }
+        ],
+        notes: [
+          {
+            title: "JavaScript Basics",
+            content: "<h3>JavaScript Fundamentals</h3><p>Key concepts in JavaScript:</p><ul><li>Variables and Data Types</li><li>Functions</li><li>Objects and Arrays</li><li>Event Handling</li></ul>"
+          }
+        ]
+      }
+    ]
   },
   {
     id: "course_2",
@@ -150,7 +219,51 @@ const sampleCourses = [
       }
     ],
     createdAt: { seconds: Date.now() / 1000 },
-    featured: true
+    featured: true,
+    modules: [
+      {
+        title: "Day 1: Python Basics",
+        lectures: [
+          {
+            title: "Python Introduction",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+            duration: "20:15"
+          },
+          {
+            title: "Variables and Data Types",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+            duration: "25:30"
+          }
+        ],
+        notes: [
+          {
+            title: "Python Syntax Guide",
+            content: "<h3>Python Syntax Basics</h3><p>Essential Python syntax:</p><ul><li>Variables: x = 10</li><li>Lists: [1, 2, 3]</li><li>Dictionaries: {'key': 'value'}</li></ul>"
+          }
+        ]
+      },
+      {
+        title: "Day 2: Data Analysis with Pandas",
+        lectures: [
+          {
+            title: "Introduction to Pandas",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+            duration: "35:20"
+          },
+          {
+            title: "Data Manipulation",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+            duration: "40:15"
+          }
+        ],
+        notes: [
+          {
+            title: "Pandas Cheat Sheet",
+            content: "<h3>Pandas Operations</h3><p>Common pandas operations:</p><ul><li>pd.read_csv() - Read CSV files</li><li>df.head() - View first rows</li><li>df.describe() - Statistical summary</li></ul>"
+          }
+        ]
+      }
+    ]
   },
   {
     id: "course_3",
@@ -201,7 +314,51 @@ const sampleCourses = [
       }
     ],
     createdAt: { seconds: Date.now() / 1000 },
-    featured: true
+    featured: true,
+    modules: [
+      {
+        title: "Day 1: Marketing Fundamentals",
+        lectures: [
+          {
+            title: "Digital Marketing Overview",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+            duration: "18:45"
+          },
+          {
+            title: "Target Audience Analysis",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+            duration: "22:30"
+          }
+        ],
+        notes: [
+          {
+            title: "Marketing Strategy Template",
+            content: "<h3>Marketing Strategy Framework</h3><p>Key components of a marketing strategy:</p><ul><li>Target Audience</li><li>Value Proposition</li><li>Marketing Channels</li><li>Budget Allocation</li></ul>"
+          }
+        ]
+      },
+      {
+        title: "Day 2: SEO Fundamentals",
+        lectures: [
+          {
+            title: "SEO Basics",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+            duration: "28:15"
+          },
+          {
+            title: "Keyword Research",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+            duration: "32:45"
+          }
+        ],
+        notes: [
+          {
+            title: "SEO Checklist",
+            content: "<h3>SEO Optimization Checklist</h3><p>Essential SEO tasks:</p><ul><li>Keyword research</li><li>On-page optimization</li><li>Meta tags</li><li>Content quality</li></ul>"
+          }
+        ]
+      }
+    ]
   },
   {
     id: "course_4",
@@ -252,7 +409,30 @@ const sampleCourses = [
       }
     ],
     createdAt: { seconds: Date.now() / 1000 },
-    featured: false
+    featured: false,
+    modules: [
+      {
+        title: "Day 1: Design Thinking",
+        lectures: [
+          {
+            title: "Introduction to UX Design",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+            duration: "24:30"
+          },
+          {
+            title: "User Research Methods",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+            duration: "28:45"
+          }
+        ],
+        notes: [
+          {
+            title: "Design Process Guide",
+            content: "<h3>UX Design Process</h3><p>The 5 stages of design thinking:</p><ul><li>Empathize</li><li>Define</li><li>Ideate</li><li>Prototype</li><li>Test</li></ul>"
+          }
+        ]
+      }
+    ]
   },
   {
     id: "course_5",
@@ -303,7 +483,30 @@ const sampleCourses = [
       }
     ],
     createdAt: { seconds: Date.now() / 1000 },
-    featured: false
+    featured: false,
+    modules: [
+      {
+        title: "Day 1: Algorithm Fundamentals",
+        lectures: [
+          {
+            title: "Big O Notation",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+            duration: "32:15"
+          },
+          {
+            title: "Array Algorithms",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+            duration: "38:30"
+          }
+        ],
+        notes: [
+          {
+            title: "Algorithm Complexity Guide",
+            content: "<h3>Time Complexity Reference</h3><p>Common time complexities:</p><ul><li>O(1) - Constant</li><li>O(log n) - Logarithmic</li><li>O(n) - Linear</li><li>O(n²) - Quadratic</li></ul>"
+          }
+        ]
+      }
+    ]
   },
   {
     id: "course_6",
@@ -354,7 +557,30 @@ const sampleCourses = [
       }
     ],
     createdAt: { seconds: Date.now() / 1000 },
-    featured: false
+    featured: false,
+    modules: [
+      {
+        title: "Day 1: React Native Setup",
+        lectures: [
+          {
+            title: "Environment Setup",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+            duration: "26:45"
+          },
+          {
+            title: "First React Native App",
+            videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+            duration: "34:20"
+          }
+        ],
+        notes: [
+          {
+            title: "Setup Instructions",
+            content: "<h3>React Native Development Setup</h3><p>Required tools and setup:</p><ul><li>Node.js</li><li>React Native CLI</li><li>Android Studio / Xcode</li><li>Device/Emulator</li></ul>"
+          }
+        ]
+      }
+    ]
   }
 ];
 
